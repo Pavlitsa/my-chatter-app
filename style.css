@@ -1,0 +1,40 @@
+/* 
+My color palette:
+primary color: #9C27B0
+light primary color: #E1BEE7
+dark primary color: #7B1FA2
+accent color: #00BCD4
+primary text: #212121
+secondary text: #757575
+divider color: #BDBDBD
+ */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(233, 230, 230);
+}
+
+.btn {
+  text-transform: uppercase;
+  background-color: #00BCD4;
+  border: none;
+  color: #FFFFFF;
+}
+
+.metadata {
+  font-size: medium;
+}
+
+.rmn-time {
+  font-size: larger;
+}
+
+.app-bar {
+  background-color: #9c27b0;
+  color: #FFFFFF;
+}
+
+.metadata,
+.chat-txt {
+  background-color: white;
+}
