@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 /* 
 My color palette:
-primary color: #9C27B0
-light primary color: #E1BEE7
-dark primary color: #7B1FA2
-accent color: #00BCD4
+primary color: #8BC34A
+light primary color: #DCEDC8
+dark primary color: #689F38
+text/icons: #212121
+accent color: #FFC107
 primary text: #212121
 secondary text: #757575
 divider color: #BDBDBD
@@ -17,29 +18,80 @@ divider color: #BDBDBD
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: rgb(233, 230, 230);
 }
 
-ul {
+/* Navbars */
+
+.app-bar {
+  background-color: #8bc34a;
+  color: #ffffff;
+  height: 62px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 1%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.app-bar img {
+  padding-top: 1%;
+}
+
+/* Footers */
+
+.app-footer {
   background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  /* align-items: baseline;
+  align-content: flex-end; */
+  height: 72px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
 }
 
-ul li {
-  list-style: none;
+.tab-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  width: 39%;
+  height: 72px;
 }
 
-.btn {
-  text-transform: uppercase;
-  background-color: #5ecedd;
+#emojis-button {
+  background: none;
+  position: relative;
+  margin-top: 16px;
+  margin-bottom: 0;
   border: none;
-  color: black;
+  margin-left: 16px;
 }
 
-.channel-btn img {
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 4px;
+#emojis {
+  background-color: #ffffff;
+  border: 2px solid #212121;
+  font-size: 20px;
+  text-align: left;
+  z-index: 1;
+  position: fixed;
+  bottom: 7%;
+  left: 40%;
+  padding: 16px;
+  width: 220px;
+  height: 160px;
+  overflow: auto;
+  margin-left: 16px;
 }
 
 .channel-btn {
@@ -53,11 +105,91 @@ ul li {
 }
 
 .selected {
-  border-bottom: 4px solid #9C27B0;
+  border-bottom: 4px solid #8bc34a;
 }
+
+.channel-btn img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 4px;
+}
+
+/* CHANNEL AREA */
+
+/* Channel List */
+
+.channels {
+  position: fixed;
+  width: 40%;
+  overflow: auto;
+  top: 62px;
+  bottom: 72px;
+}
+
+.channel-list {
+  list-style: none;
+  background-color: #ffffff;
+}
+
+.channel-item {
+  padding: 16px;
+  font-size: 16px;
+  border-bottom: 1px solid rgb(233, 230, 230);
+}
+
+.channel-item img {
+  padding-left: 4px;
+  vertical-align: middle;
+}
+
+.selected-list-item {
+  color: #8bc34a;
+  border-left: 4px solid #8bc34a;
+}
+
+.channel-meta {
+  position: absolute;
+  left: 85%;
+}
+
+/* CHAT AREA */
+
+#title-name {
+  text-transform: uppercase;
+}
+
+.chat {
+  position: fixed;
+  width: 60%;
+  left: 40%;
+  right: 0;
+  top: 62px;
+  bottom: 72px;
+  overflow: auto;
+}
+
+.chat-container {
+  margin-bottom: 150px;
+}
+
+.chat-txt {
+  background-color: white;
+  /* padding: 16px; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.chat-txt > p {
+  margin: 16px;
+}
+
+/* Chat Metadata */
 
 .metadata {
   font-size: medium;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .metadata a {
@@ -69,50 +201,29 @@ ul li {
   font-size: larger;
 }
 
-.app-bar {
-  background-color: #9c27b0;
-  color: #ffffff;
-}
+/* Chat Messages */
 
-.chat-txt {
-  background-color: white;
-  padding: 16px;
-}
-
-.channel-btn-container {
-  background-color: #ffffff;
-}
-
-.chat-container {
+.msg-container {
   width: 80%;
   margin-bottom: 8px;
   margin-left: 2.5%;
 }
 
 .my-msg {
+  /* margin-top: 8%; */
   width: 80%;
   margin-bottom: 8px;
   margin-left: 17.5%;
 }
 
-#title-name {
+/* Chat Buttons */
+
+.btn {
   text-transform: uppercase;
-}
-
-.selected-list-item {
-  color: #9C27B0;
-  border-left: 4px solid #9C27B0;
-}
-
-.channel-item {
-  padding: 16px;
-  font-size: 16px;
-  /* box-sizing: content-box;
-  height: 32px; */
-  border-bottom: 1px solid rgb(233, 230, 230);
-}
-
-.channel-item img {
-  padding-left: 4px;
-  vertical-align: middle;
+  background-color: #ffc107;
+  border: 1px solid #bdbdbd;
+  box-shadow: 1px 1px 0px 0px rgb(122, 122, 122);
+  color: #212121;
+  align-self: flex-end;
+  margin: 8px 8px;
 }
