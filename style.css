@@ -40,8 +40,9 @@ body {
   z-index: 1;
 }
 
-.app-bar img {
-  padding-top: 1%;
+.app-bar i {
+  padding-bottom: 5%;
+  font-size: 24px;
 }
 
 /* Footers */
@@ -78,6 +79,10 @@ body {
   margin-left: 16px;
 }
 
+#emojis-button:focus {
+  outline: 0;
+}
+
 #emojis {
   background-color: #ffffff;
   border: 2px solid #212121;
@@ -92,6 +97,7 @@ body {
   height: 160px;
   overflow: auto;
   margin-left: 16px;
+  display: none;
 }
 
 .channel-btn {
@@ -102,6 +108,10 @@ body {
   font-size: 13px;
   height: 72px;
   width: 33%;
+}
+
+.channel-btn:focus {
+  outline: 0;
 }
 
 .selected {
@@ -138,9 +148,20 @@ body {
   border-bottom: 1px solid rgb(233, 230, 230);
 }
 
-.channel-item img {
-  padding-left: 4px;
+
+
+.star {
+  padding-bottom: 16px;
+  font-size: 24px;
+  text-align: center;
   vertical-align: middle;
+}
+
+.chevron {
+/* padding-left: 2px; */
+font-size: 27px;
+margin-bottom: 25px;
+text-align: center;
 }
 
 .selected-list-item {
@@ -150,7 +171,7 @@ body {
 
 .channel-meta {
   position: absolute;
-  left: 85%;
+  left: 90%;
 }
 
 /* CHAT AREA */
@@ -174,6 +195,17 @@ body {
 
 .chat-container {
   margin-bottom: 150px;
+}
+
+#chat-navbar{
+  display: flex;
+  justify-content: space-between;
+}
+
+#chat-bar-img {
+  position: fixed;
+  right: 0;
+  padding-right: 16px;
 }
 
 .chat-txt {
@@ -231,3 +263,4 @@ body {
   align-self: flex-end;
   margin: 8px 8px;
 }
+
